@@ -7,7 +7,7 @@ Routes and request types:
 - http://localhost:3000/api/url/list - GET Request (Paramaters: - )
 - http://localhost:3000/api/url/update - POST Request (Paramaters: id, targetURL)
 - http://localhost:3000/api/url/delete - POST Request (Paramaters: id)
-- http://localhost:3000/api/url/ip - GET Request (Paramaters: IP Address taken from users get request automcatically)
+- http://localhost:3000/api/url/ip - GET Request (Paramaters: IP Address taken from users get request automatically)
 
 Kindly use [POSTMAN](https://www.postman.com/) or [ThunderClient](https://www.thunderclient.io/) for testing the first four operations. You can use the same for the IP route as well but it might not find the IP address in the headers (x-forwarded-for). You can use ngrok and then use the external address.
 
