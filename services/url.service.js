@@ -116,10 +116,18 @@ module.exports = {
 				path: "/ip"
 			},
 			async handler(ctx) {
-				var ip = ctx.options.parentCtx.params.req.headers['x-forwarded-for'];
+				const docker = "parentCtx" in ctx.options;
 
+				//console.log(docker);
+
+				if(docker){
+					var ip = ctx.options.parentCtx.params.req.headers['x-forwarded-for'];
+				}else{
+					var ip = "IP address could not be found if you are using docker as there are no request headers."
+				}
+				
 				if(ip == undefined){
-					ip = "192.168.1.1 (IP address could not be found in the header. Please use ngrok or deploy.)";
+					var ip = "192.168.1.1 (IP address could not be found in the header. Please use ngrok or deploy.)";
 				}
 
                 const url_list = await broker.call("urls.find");
