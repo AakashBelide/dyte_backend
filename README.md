@@ -12,6 +12,29 @@ Routes and request types:
 Kindly use [POSTMAN](https://www.postman.com/) or [ThunderClient](https://www.thunderclient.io/) for testing the first four operations. You can use the same for the IP route as well but it might not find the IP address in the headers (x-forwarded-for). You can use ngrok and then use the external address.
 
 
+## Commands
+- `npm install`: To install all the required modules
+- `npm run dev`: To start the application in development mode on http://localhost:3000
+- `docker-compose up -d`: Start docker before running this command. The microservices are started along with NATS and Traefik
+- `docker-compose logs`: To look at the logs
+
+## Demo Screenshots
+IP Response
+![IP Response](Screenshots/1.png "IP Response")
+
+Webhook listener
+![Webhook listener](Screenshots/2.png "Webhook listener")
+
+Webhook listener
+![Webhook listener](Screenshots/3.png "Webhook listener")
+
+MongoDB
+![MongoDB](Screenshots/4.png "MongoDB")
+
+MongoDB
+![MongoDB](Screenshots/4.png "MongoDB")
+
+
 # microservices [![Moleculer](https://badgen.net/badge/Powered%20by/Moleculer/0e83cd)](https://moleculer.services)
 This is a [Moleculer](https://moleculer.services/)-based microservices project. Generated with the [Moleculer CLI](https://moleculer.services/docs/0.14/moleculer-cli.html).
 
