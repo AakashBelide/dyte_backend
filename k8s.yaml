@@ -83,31 +83,31 @@ spec:
 
 ---
 #########################################################
-# Greeter service
+# Url service
 #########################################################
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: greeter
+  name: url
 spec:
   selector:
     matchLabels:
-      app: greeter
+      app: url
   replicas: 2
   template:
     metadata:
       labels:
-        app: greeter
+        app: url
     spec:
       containers:
-      - name: greeter
+      - name: url
         image: microservices
         envFrom:
         - configMapRef:
             name: common-env
         env:
           - name: SERVICES
-            value: greeter
+            value: url
 
 
 ---
